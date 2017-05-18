@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="No6-kD-RX6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Keyboard View Controller-->
+        <scene sceneID="xH8-8c-08v">
+            <objects>
+                <viewController id="No6-kD-RX6" customClass="KeyboardViewController" customModule="Grandma_sKeyboard_CustomKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bYN-VF-BIm"/>
+                        <viewControllerLayoutGuide type="bottom" id="u8c-ZE-k14"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wmI-AV-VSg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkM-bX-6dJ">
+                                <rect key="frame" x="0.0" y="389" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wmI-AV-VSg" id="Ebb-SE-y2Q"/>
+                                    <outlet property="delegate" destination="wmI-AV-VSg" id="0YV-8K-af1"/>
+                                </connections>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BUk-U9-K7K">
+                                <rect key="frame" x="121" y="605" width="133" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycx-vz-IJg">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Enter"/>
+                                        <connections>
+                                            <action selector="enterButtonPressed:" destination="No6-kD-RX6" eventType="touchUpInside" id="NuI-t6-ed2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="75" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCq-Ty-KVV">
+                                        <rect key="frame" x="74" y="0.0" width="59" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="No6-kD-RX6" eventType="touchUpInside" id="ZRf-cu-vl9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01176470588" green="0.76078431369999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BUk-U9-K7K" firstAttribute="top" secondItem="OkM-bX-6dJ" secondAttribute="bottom" id="3Mt-Rc-qfk"/>
+                            <constraint firstItem="OkM-bX-6dJ" firstAttribute="leading" secondItem="wmI-AV-VSg" secondAttribute="leading" id="58G-iZ-dL5"/>
+                            <constraint firstAttribute="trailing" secondItem="OkM-bX-6dJ" secondAttribute="trailing" id="5n6-N3-L13"/>
+                            <constraint firstItem="u8c-ZE-k14" firstAttribute="top" secondItem="BUk-U9-K7K" secondAttribute="bottom" constant="20" id="QQT-l6-2lc"/>
+                            <constraint firstItem="OkM-bX-6dJ" firstAttribute="centerX" secondItem="wmI-AV-VSg" secondAttribute="centerX" id="hmY-nQ-8sZ"/>
+                            <constraint firstItem="BUk-U9-K7K" firstAttribute="centerX" secondItem="wmI-AV-VSg" secondAttribute="centerX" id="uEg-XW-aez"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="pickerView" destination="OkM-bX-6dJ" id="LnG-eQ-eU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfn-Aa-2hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+</document>
